@@ -1,0 +1,71 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* header */
+
+.header {
+    display: flex;
+    flex-direction: row;
+}
+
+
+
+/* greeting */
+
+.greeting_bg {
+    background: url(./images/BG-greeting.png);
+    background-size: cover;
+}
+
+.greeting-description {
+    color: #FFFFFF;
+}
+
+
+/* services */
+
+.services-blocks {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.block {
+    width: 33%;
+}
+
+
+/* description */
+
+.description-checklist {
+    display: flex;
+}
+
+/* activity */
+
+.activity-photo {
+    width: 100%;
+}
+
+.activity-photo > img {
+    width: 33%;
+}
+
+/* footer */
+
+.footer {
+    color: #FFFFFF;
+}
+
+.footer_bg {
+    background: url(./images/footer-BG.png);
+}
+
+.footer-contacts {
+    display: flex;
+    
+}
