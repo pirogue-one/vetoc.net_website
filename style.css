@@ -5,26 +5,155 @@
     font-family: 'Montserrat', sans-serif;
 }
 
-/* header */
+/* BURGER */
 
-.header {
-    display: flex;
-    flex-direction: row;
+.menu>li {
+    overflow: hidden;
+}
+
+.burger-container {
+    display: none;
+    height: 100%;
+    width: 30px;
+    cursor: pointer;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 
+#burger {
+    display: none;
+}
+
+.button-burger,
+.button-burger::before,
+.button-burger::after {
+    display: block;
+    background-color: #76c4d3;
+    position: absolute;
+    height: 4px;
+    width: 30px;
+    transition: transform 400ms cubic-bezier(0.23, 1, 0.32, 1);
+    border-radius: 2px;
+}
+
+.button-burger::before {
+    content: '';
+    margin-top: -8px;
+}
+
+.button-burger::after {
+    content: '';
+    margin-top: 8px;
+}
+
+#burger:checked+.burger-container .button-burger::before {
+    margin-top: 0px;
+    transform: rotate(405deg);
+}
+
+#burger:checked+.burger-container .button-burger {
+    background: rgba(255, 255, 255, 0);
+}
+
+#burger:checked+.burger-container .button-burger::after {
+    margin-top: 0px;
+    transform: rotate(-405deg);
+}
+
+/* BURGER */
+
+/* header */
+
+.header-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 12.875rem;
+    padding: 1.563rem 2.5rem;
+    
+}
+
+.header-logo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.header-logo-name {
+    font-size: 2.25rem;
+    font-weight: 300;
+    color: #000000;
+}
+
+.menu {
+    display: flex;
+    gap: 2.625rem;
+}
+
+.menu__link {
+    font-size: 1rem;
+    font-weight: 400;
+    color: #000000;
+    text-decoration: none;
+}
+
+.header-phone {
+    display: flex;
+    gap: 0.625rem;
+    align-items: center;
+}
+
+.phone-link {
+    text-decoration: none;
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: #000000;
+}
+
+/* end header */
 
 /* greeting */
 
-.greeting_bg {
+.greeting-container {
     background: url(./images/BG-greeting.png);
     background-size: cover;
 }
 
-.greeting-description {
-    color: #FFFFFF;
+.greeting_bg {
+    background: #00000066;
 }
 
+.greeting-main {
+    color: #FFFFFF;
+    padding: 7.063rem 20.313rem;
+    text-align: center;
+}
+
+.greeting-header {
+    font-size: 6rem;
+    font-weight: 600;
+}
+
+.greeting-adress {
+    font-size: 3rem;
+    font-weight: 600;
+    padding-bottom: 2.813rem;
+}
+
+.greeting-main-description {
+    display: flex;
+    flex-direction: column;
+    gap: 0.938rem;
+}
+
+.description {
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+/* end greeting */
 
 /* services */
 
@@ -67,5 +196,5 @@
 
 .footer-contacts {
     display: flex;
-    
+
 }
