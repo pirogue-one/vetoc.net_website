@@ -155,11 +155,14 @@
 
 /* end greeting */
 
-/* services */
+/* services - карточки */
+
+.services {
+    background: linear-gradient(180deg, #CCDDFE 0%, #FFF 100%);
+}
 
 .services-container {
     padding: 2.5rem 2.5rem 0 2.5rem;
-    background: linear-gradient(180deg, #CCDDFE 0%, #FFF 100%);
 }
 
 .services-header {
@@ -200,20 +203,51 @@
     text-overflow: ellipsis;
 }
 
-/* description */
+/* конец services - карточки */
+
+/* description 
 
 .description-checklist {
     display: flex;
 }
 
-/* activity */
+/* portfolio */
 
-.activity-photo {
-    width: 100%;
+.portfolio {
+    background: linear-gradient(180deg, #CCDDFE 0%, #FFF 100%);
 }
 
-.activity-photo>img {
+.portfolio-container {
+    padding: 0 2.5rem 3.75rem 2.5rem;
+}
+
+.portfolio-header {
+    font-size: 2.25rem;
+    font-weight: 500;
+    padding: 2.5rem 0;
+    text-align: center;
+}
+
+.portfolio-photos {
+    width: 100%;
+    display: flex;
+    gap: 5rem;
+    padding-bottom: 2.5rem;
+}
+
+.portfolio-photos>img {
     width: 33%;
+}
+
+.photos-item {
+    text-align: center;
+}
+
+.photos__link {
+    font-size: 1.5rem;
+    font-weight: 500;
+    text-decoration: underline;
+    color: #000000;
 }
 
 /* footer */
