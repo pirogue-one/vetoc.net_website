@@ -373,3 +373,110 @@
 .gallery {
     width: 22%;
 }
+
+/* КОНЕЦ СТРАНИЦЫ ПОРТФОЛИО 
+
+               advantages */
+
+/* СТРАНИЦА КОНТАКТЫ 
+
+               footer */
+
+.contacts-form {
+    background: linear-gradient(180deg, #CCDDFE 0%, #FFF 100%);
+}
+
+.contacts-form-container {
+    padding: 2.5rem 5rem 2.5rem 5rem;
+    display: flex;
+    gap: 5rem;
+}
+
+.contacts__page {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 4.688rem 2.5rem 4.688rem 2.5rem;
+}
+
+.summary__contacts {
+    display: flex;
+    gap: 3.125rem;
+}
+
+fieldset {
+    display: flex;
+    flex-direction: column;
+    gap: 1.688rem;
+    background: #FFFFFF;
+    border: none;
+    padding: 2.5rem;
+}
+
+.form-contact {
+    color: #000000;
+    font-size: 1.25rem;
+    font-weight: 400;
+}
+
+.form-name,
+.form-mail,
+.form-message {
+    background: #F6F7FB;
+    border: none;
+    padding: 0.625rem;
+    font-size: 1rem;
+    font-weight: 300;
+    color: #000000;
+}
+
+.form-message {
+    height: 4.75rem;
+}
+
+.form-check {
+    display: flex;
+    gap: 0.375rem;
+}
+
+.checkbox-text {
+    color: #000000;
+    font-size: 0.625rem;
+    font-weight: 300;
+}
+
+.form-btn {
+    background: #CDDEFF;
+    border: 1px solid #CDDEFF;
+    font-size: 1rem;
+    font-weight: 400;
+    color: #000000;
+    padding: 0.875rem 1.25rem;
+}
+
+.contacts__page {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2.5rem;
+}
+
+.contacts-description__page {
+    color: #000000;
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+.contacts-phone__page {
+    color: #000000;
+    font-size: 3rem;
+    font-weight: 400;
+    text-decoration: none;
+}
+
+.contacts-mail__page {
+    color: #000000;
+    text-decoration: none;
+    font-size: 3rem;
+    font-weight: 400; 
+}
