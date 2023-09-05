@@ -74,7 +74,7 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    gap: 12.875rem;
+    justify-content: space-between;
     padding: 1.563rem 2.5rem;
 }
 
@@ -139,12 +139,12 @@
 }
 
 .greeting-header {
-    font-size: 6rem;
+    font-size: 5rem;
     font-weight: 600;
 }
 
 .greeting-adress {
-    font-size: 3rem;
+    font-size: 2.3rem;
     font-weight: 600;
     padding-bottom: 2.813rem;
 }
@@ -156,7 +156,7 @@
 }
 
 .description {
-    font-size: 2rem;
+    font-size: 1.5rem;
     font-weight: 600;
 }
 
@@ -200,7 +200,7 @@
 }
 
 .card-description {
-    font-size: 0.875;
+    font-size: 0.8rem;
     font-weight: 400;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -251,7 +251,7 @@
 .bg-grass {
     background: url(./images/grass.png);
     background-size: cover;
-    padding-bottom: 100px;
+    height: 100px;
 }
 
 /* end background grass */
@@ -296,7 +296,7 @@
 .summary-text {
     color: #FFFFFF;
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    font-size: 2.25rem;
+    font-size: 2.1rem;
     font-weight: 600;
 }
 
@@ -309,13 +309,14 @@
 
 .contacts-description {
     color: #FFFFFF;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     font-weight: 600;
+    padding-right: 6.063rem;
 }
 
 .contacts-phone {
     color: #FFFFFF;
-    font-size: 4rem;
+    font-size: 2.5rem;
     font-weight: 600;
     text-decoration: none;
 }
@@ -328,7 +329,7 @@
 .contacts-mail {
     color: #FFFFFF;
     text-decoration: none;
-    font-size: 4rem;
+    font-size: 2.5rem;
     font-weight: 600;
 }
 
@@ -359,7 +360,7 @@
 .advantages-checklist {
     display: flex;
     align-items: center;
-    font-size: 2rem;
+    font-size: 1.6rem;
     font-weight: 400;
 }
 
@@ -432,6 +433,7 @@ fieldset {
 
 .form-message {
     height: 4.75rem;
+    resize: none;
 }
 
 .form-check {
@@ -463,13 +465,13 @@ fieldset {
 
 .contacts-description__page {
     color: #000000;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     font-weight: 400;
 }
 
 .contacts-phone__page {
     color: #000000;
-    font-size: 3rem;
+    font-size: 2.5rem;
     font-weight: 400;
     text-decoration: none;
 }
@@ -477,6 +479,94 @@ fieldset {
 .contacts-mail__page {
     color: #000000;
     text-decoration: none;
-    font-size: 3rem;
-    font-weight: 400; 
+    font-size: 2.5rem;
+    font-weight: 400;
+}
+
+@media (min-width: 1024px) and (max-width: 1439px) {
+    .header-logo-name {
+        font-size: 1.8rem;
+    }
+
+    .phone-link {
+        font-size: 1.1rem;
+    }
+
+    .greeting-main {
+        padding: 3.063rem 5.313rem;
+    }
+
+    .greeting-header {
+        font-size: 4.5rem;
+    }
+
+    .greeting-adress {
+        font-size: 2rem;
+    }
+
+    .description {
+        font-size: 1.3rem;
+    }
+
+    .services-header {
+        font-size: 1.8rem;
+    }
+
+    .services-cards {
+        gap: 3rem;
+        padding: 0 1rem 3.75rem 1rem;
+    }
+
+    .portfolio-header {
+        font-size: 1.8rem;
+    }
+
+    .portfolio-photos {
+        gap: 3rem;
+    }
+
+    .portfolio-photos>img {
+        width: 30%;
+    }
+
+    .photos__link {
+        font-size: 1.3rem;
+    }
+
+    .summary-text {
+        font-size: 1.7rem;
+    }
+
+    .footer-contacts {
+        padding: 3.563rem 2.375rem 3.625rem 2.625rem;
+    }
+
+    .contacts {
+        gap: 1.5rem;
+    }
+
+    .contacts-description {
+        font-size: 1.1rem;
+        padding-right: 1.063rem;
+    }
+
+    .contacts-phone {
+        font-size: 2.2rem;
+    }
+
+    .contacts-mail {
+        font-size: 2.2rem;
+    }
+
+    .advantages-header {
+        font-size: 2rem;
+    }
+
+    .advantages-checklist {
+        font-size: 1.3rem;
+    }
+
+    .gallery {
+        width: 20%;
+    }
 }
