@@ -5,13 +5,13 @@
     font-family: 'Montserrat', sans-serif;
 }
 
-.sections__bg {
+.sections-bg {
     background: linear-gradient(180deg, #CCDDFE 0%, #FFF 100%);
 }
 
 /* BURGER */
 
-.menu>li {
+.header__menu>li {
     overflow: hidden;
 }
 
@@ -70,7 +70,7 @@
 
 /* header */
 
-.header-container {
+.header__container {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -78,25 +78,30 @@
     padding: 1.563rem 2.5rem;
 }
 
-.header-logo {
+.header__logo {
     display: flex;
     flex-direction: row;
     align-items: center;
 }
 
-.header-logo>a {
+.header__logo>a {
     text-decoration: none;
 }
 
-.header-logo-name {
+.header__logo-name {
     font-size: 2.25rem;
     font-weight: 300;
     color: #000000;
 }
 
-.menu {
+.header__menu {
     display: flex;
-    gap: 2.625rem;
+    justify-content: space-between;
+    width: 35%;
+}
+
+.menu__item {
+    text-align: center;
 }
 
 .menu__link {
@@ -106,13 +111,13 @@
     text-decoration: none;
 }
 
-.header-phone {
+.header__phone {
     display: flex;
     gap: 0.625rem;
     align-items: center;
 }
 
-.phone-link {
+.header__phone-link {
     text-decoration: none;
     font-size: 1.3rem;
     font-weight: 500;
@@ -121,70 +126,87 @@
 
 /* end header */
 
-/* greeting */
+/* hero */
 
-.greeting-container {
+.hero__container {
     background: url(./images/BG-greeting.png);
     background-size: cover;
+    background-position-x: center;
 }
 
-.greeting_shadow {
-    background: #00000066;
-}
-
-.greeting-main {
+.hero__text-box{
+    background: rgba(0, 0, 0, 0.4);
     color: #FFFFFF;
-    padding: 7.063rem 20.313rem;
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap:0;
+    align-items: center;
+    justify-content: center;
+    padding: 7.063rem 2.5rem;
+
 }
 
-.greeting-header {
+.hero__title {
     font-size: 5rem;
     font-weight: 600;
 }
 
-.greeting-adress {
-    font-size: 2.3rem;
-    font-weight: 600;
-    padding-bottom: 2.813rem;
-}
-
-.greeting-main-description {
+.hero__text {
     display: flex;
     flex-direction: column;
+    gap:2.813rem;
+    align-items: center;
+    justify-content: center; 
+}
+
+.hero__location {
+    font-size: 2.3rem;
+    font-weight: 600;
+    text-align: center;
+}
+
+.hero__mottos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     gap: 0.938rem;
 }
 
-.description {
+.hero__motto {
     font-size: 1.5rem;
     font-weight: 600;
 }
 
-/* end greeting */
+/* hero end*/
+
+.section__title {
+    font-size: 2.25rem;
+    font-weight: 500;
+    padding: 2.5rem 0;
+    text-align: center;
+}
 
 /* services - карточки */
 
-.services-container {
+.services__container {
     padding: 2.5rem 2.5rem 0 2.5rem;
 }
 
-.services-header {
-    text-align: center;
-    font-weight: 500;
-    font-size: 2.25rem;
-    padding-bottom: 2.5rem;
-}
-
-.services-cards {
-    width: 100%;
+.services__cards-box {
+    width: 85%;
     display: flex;
     flex-direction: row;
-    gap: 5rem;
-    padding: 0 10rem 3.75rem 10rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 3rem;
+    padding: 0 2.5rem;
+    margin: 0 auto;
 }
 
-.card {
-    width: 33%;
+.services__card {
+    width: 25%;
+    min-width: 20%;
     display: flex;
     flex-direction: column;
     gap: 1.563rem;
@@ -194,16 +216,19 @@
     padding: 2.5rem 1.563rem;
 }
 
-.card-header {
+.services__card-title {
     font-size: 1rem;
     font-weight: 600;
+    text-align: center;
 }
 
-.card-description {
+.services__card-description {
     font-size: 0.8rem;
     font-weight: 400;
     overflow: hidden;
     text-overflow: ellipsis;
+    text-align: justify;
+    text-align-last: left;
 }
 
 /* конец services - карточки */
@@ -211,33 +236,25 @@
 
 /* portfolio */
 
-.portfolio-container {
+.portfolio {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    align-items: center;
     padding: 0 2.5rem 3.75rem 2.5rem;
 }
-
-.portfolio-header {
-    font-size: 2.25rem;
-    font-weight: 500;
-    padding: 2.5rem 0;
-    text-align: center;
-}
-
-.portfolio-photos {
+.portfolio__photo-box {
     width: 100%;
     display: flex;
-    gap: 5rem;
+    justify-content: space-between;
     padding-bottom: 2.5rem;
 }
 
-.portfolio-photos>img {
-    width: 33%;
+.portfolio__photo {
+    max-width: 30%;
 }
 
-.photos-item {
-    text-align: center;
-}
-
-.photos__link {
+.portfolio__link {
     font-size: 1.5rem;
     font-weight: 500;
     text-decoration: underline;
@@ -258,80 +275,79 @@
 
 /* footer */
 
-.footer-container {
+.footer__container {
     background: url(./images/footer-BG.png);
     background-size: cover;
+    background-position-x: center;
 }
 
-.footer_shadow {
+.footer__darkening {
     background: #00180D99;
-}
-
-.footer-contacts {
     display: flex;
-    gap: 13.188rem;
+    gap: 10rem;
     padding: 5.563rem 2.375rem 5.625rem 2.625rem;
 }
 
-.summary {
+.footer__summary {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     gap: 3.125rem;
 }
 
-.summary-item {
+.footer__summary-item {
     display: flex;
     align-items: center;
     gap: 1.625rem;
     color: #FFFFFF;
 }
 
-.summary-line {
+.footer__summary-dash{
     width: 3.688rem;
-    height: 0.313rem;
+    height: 0.3rem;
     background: #FFFFFF;
 }
 
-.summary-text {
+.footer__summary-text {
     color: #FFFFFF;
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    font-size: 2.1rem;
+    font-size: 1.7rem;
     font-weight: 600;
 }
 
-.contacts {
+.footer__contacts {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    gap: 2.5rem;
+    gap: 2rem;
 }
 
-.contacts-description {
+.footer__contacts-text {
     color: #FFFFFF;
     font-size: 1.2rem;
     font-weight: 600;
-    padding-right: 6.063rem;
+    max-width: 82%;
 }
 
-.contacts-phone {
+.footer__contacts-phone {
     color: #FFFFFF;
     font-size: 2.5rem;
     font-weight: 600;
     text-decoration: none;
 }
 
-.contacts-socials {
+.footer__contacts-socials {
     display: flex;
     gap: 4.375rem;
 }
 
-.contacts-mail {
+.footer__contacts-mail {
     color: #FFFFFF;
     text-decoration: none;
     font-size: 2.5rem;
     font-weight: 600;
 }
+
 
 
 /* СТРАНИЦА ПОРТФОЛИО 
