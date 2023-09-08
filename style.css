@@ -1,0 +1,588 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.sections-bg {
+    background: linear-gradient(180deg, #CCDDFE 0%, #FFF 100%);
+}
+
+/* BURGER */
+
+.header__menu>li {
+    overflow: hidden;
+}
+
+.burger-container {
+    display: none;
+    height: 100%;
+    width: 30px;
+    cursor: pointer;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+#burger {
+    display: none;
+}
+
+.button-burger,
+.button-burger::before,
+.button-burger::after {
+    display: block;
+    background-color: #76c4d3;
+    position: absolute;
+    height: 4px;
+    width: 30px;
+    transition: transform 400ms cubic-bezier(0.23, 1, 0.32, 1);
+    border-radius: 2px;
+}
+
+.button-burger::before {
+    content: '';
+    margin-top: -8px;
+}
+
+.button-burger::after {
+    content: '';
+    margin-top: 8px;
+}
+
+#burger:checked+.burger-container .button-burger::before {
+    margin-top: 0px;
+    transform: rotate(405deg);
+}
+
+#burger:checked+.burger-container .button-burger {
+    background: rgba(255, 255, 255, 0);
+}
+
+#burger:checked+.burger-container .button-burger::after {
+    margin-top: 0px;
+    transform: rotate(-405deg);
+}
+
+/* BURGER */
+
+/* header */
+
+.header__container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.563rem 2.5rem;
+}
+
+.header__logo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.header__logo>a {
+    text-decoration: none;
+}
+
+.header__logo-name {
+    font-size: 2.25rem;
+    font-weight: 300;
+    color: #000000;
+}
+
+.header__menu {
+    display: flex;
+    justify-content: space-between;
+    width: 35%;
+}
+
+.menu__item {
+    text-align: center;
+}
+
+.menu__link {
+    font-size: 1rem;
+    font-weight: 400;
+    color: #000000;
+    text-decoration: none;
+}
+
+.header__phone {
+    display: flex;
+    gap: 0.625rem;
+    align-items: center;
+}
+
+.header__phone-link {
+    text-decoration: none;
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: #000000;
+}
+
+/* end header */
+
+/* hero */
+
+.hero__container {
+    background: url(./images/BG-greeting.png);
+    background-size: cover;
+    background-position-x: center;
+}
+
+.hero__text-box{
+    background: rgba(0, 0, 0, 0.4);
+    color: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    gap:0;
+    align-items: center;
+    justify-content: center;
+    padding: 7.063rem 2.5rem;
+
+}
+
+.hero__title {
+    font-size: 5rem;
+    font-weight: 600;
+}
+
+.hero__text {
+    display: flex;
+    flex-direction: column;
+    gap:2.813rem;
+    align-items: center;
+    justify-content: center; 
+}
+
+.hero__location {
+    font-size: 2.3rem;
+    font-weight: 600;
+    text-align: center;
+}
+
+.hero__mottos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.938rem;
+}
+
+.hero__motto {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+/* hero end*/
+
+.section__title {
+    font-size: 2.25rem;
+    font-weight: 500;
+    padding: 2.5rem 0;
+    text-align: center;
+}
+
+/* services - карточки */
+
+.services__container {
+    padding: 2.5rem 2.5rem 0 2.5rem;
+}
+
+.services__cards-box {
+    width: 85%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 3rem;
+    padding: 0 2.5rem;
+    margin: 0 auto;
+}
+
+.services__card {
+    width: 25%;
+    min-width: 20%;
+    display: flex;
+    flex-direction: column;
+    gap: 1.563rem;
+    align-items: center;
+    border-radius: 0.625rem;
+    background: #F9F9F9;
+    padding: 2.5rem 1.563rem;
+}
+
+.services__card-title {
+    font-size: 1rem;
+    font-weight: 600;
+    text-align: center;
+}
+
+.services__card-description {
+    font-size: 0.8rem;
+    font-weight: 400;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: justify;
+    text-align-last: left;
+}
+
+/* конец services - карточки */
+
+
+/* portfolio */
+
+.portfolio {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    align-items: center;
+    padding: 0 2.5rem 3.75rem 2.5rem;
+}
+.portfolio__photo-box {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 2.5rem;
+}
+
+.portfolio__photo {
+    max-width: 30%;
+}
+
+.portfolio__link {
+    font-size: 1.5rem;
+    font-weight: 500;
+    text-decoration: underline;
+    color: #000000;
+}
+
+/* end portfolio */
+
+/* background grass */
+
+.bg-grass {
+    background: url(./images/grass.png);
+    background-size: cover;
+    height: 100px;
+}
+
+/* end background grass */
+
+/* footer */
+
+.footer__container {
+    background: url(./images/footer-BG.png);
+    background-size: cover;
+    background-position-x: center;
+}
+
+.footer__darkening {
+    background: #00180D99;
+    display: flex;
+    gap: 10rem;
+    padding: 5.563rem 2.375rem 5.625rem 2.625rem;
+}
+
+.footer__summary {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 3.125rem;
+}
+
+.footer__summary-item {
+    display: flex;
+    align-items: center;
+    gap: 1.625rem;
+    color: #FFFFFF;
+}
+
+.footer__summary-dash{
+    width: 3.688rem;
+    height: 0.3rem;
+    background: #FFFFFF;
+}
+
+.footer__summary-text {
+    color: #FFFFFF;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    font-size: 1.7rem;
+    font-weight: 600;
+}
+
+.footer__contacts {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2rem;
+}
+
+.footer__contacts-text {
+    color: #FFFFFF;
+    font-size: 1.2rem;
+    font-weight: 600;
+    max-width: 82%;
+}
+
+.footer__contacts-phone {
+    color: #FFFFFF;
+    font-size: 2.5rem;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.footer__contacts-socials {
+    display: flex;
+    gap: 4.375rem;
+}
+
+.footer__contacts-mail {
+    color: #FFFFFF;
+    text-decoration: none;
+    font-size: 2.5rem;
+    font-weight: 600;
+}
+
+
+
+/* СТРАНИЦА ПОРТФОЛИО 
+
+               advantages */
+
+.advantages-container {
+    padding: 0 2.5rem;
+}
+
+.advantages-header {
+    font-size: 2.25rem;
+    font-weight: 500;
+    text-align: center;
+    padding: 2.5rem 0 2.188rem 0;
+}
+
+.advantages-list {
+    padding: 0 1.313rem 0 1.313rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.938rem;
+}
+
+.advantages-checklist {
+    display: flex;
+    align-items: center;
+    font-size: 1.6rem;
+    font-weight: 400;
+}
+
+.portfolio-gallery {
+    width: 100%;
+    display: flex;
+    gap: 3.563rem;
+    padding: 1.5rem 0 1.688rem 0;
+}
+
+.gallery {
+    width: 22%;
+}
+
+/* КОНЕЦ СТРАНИЦЫ ПОРТФОЛИО 
+
+               advantages */
+
+/* СТРАНИЦА КОНТАКТЫ 
+
+               footer */
+
+.contacts-form {
+    background: linear-gradient(180deg, #CCDDFE 0%, #FFF 100%);
+}
+
+.contacts-form-container {
+    padding: 2.5rem 5rem 2.5rem 5rem;
+    display: flex;
+    gap: 5rem;
+}
+
+.contacts__page {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 4.688rem 2.5rem 4.688rem 2.5rem;
+}
+
+.summary__contacts {
+    display: flex;
+    gap: 3.125rem;
+}
+
+fieldset {
+    display: flex;
+    flex-direction: column;
+    gap: 1.688rem;
+    background: #FFFFFF;
+    border: none;
+    padding: 2.5rem;
+}
+
+.form-contact {
+    color: #000000;
+    font-size: 1.25rem;
+    font-weight: 400;
+}
+
+.form-name,
+.form-mail,
+.form-message {
+    background: #F6F7FB;
+    border: none;
+    padding: 0.625rem;
+    font-size: 1rem;
+    font-weight: 300;
+    color: #000000;
+}
+
+.form-message {
+    height: 4.75rem;
+    resize: none;
+}
+
+.form-check {
+    display: flex;
+    gap: 0.375rem;
+}
+
+.checkbox-text {
+    color: #000000;
+    font-size: 0.625rem;
+    font-weight: 300;
+}
+
+.form-btn {
+    background: #CDDEFF;
+    border: 1px solid #CDDEFF;
+    font-size: 1rem;
+    font-weight: 400;
+    color: #000000;
+    padding: 0.875rem 1.25rem;
+}
+
+.contacts__page {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2.5rem;
+}
+
+.contacts-description__page {
+    color: #000000;
+    font-size: 1.3rem;
+    font-weight: 400;
+}
+
+.contacts-phone__page {
+    color: #000000;
+    font-size: 2.5rem;
+    font-weight: 400;
+    text-decoration: none;
+}
+
+.contacts-mail__page {
+    color: #000000;
+    text-decoration: none;
+    font-size: 2.5rem;
+    font-weight: 400;
+}
+
+@media (min-width: 1024px) and (max-width: 1439px) {
+    .header-logo-name {
+        font-size: 1.8rem;
+    }
+
+    .phone-link {
+        font-size: 1.1rem;
+    }
+
+    .greeting-main {
+        padding: 3.063rem 5.313rem;
+    }
+
+    .greeting-header {
+        font-size: 4.5rem;
+    }
+
+    .greeting-adress {
+        font-size: 2rem;
+    }
+
+    .description {
+        font-size: 1.3rem;
+    }
+
+    .services-header {
+        font-size: 1.8rem;
+    }
+
+    .services-cards {
+        gap: 3rem;
+        padding: 0 1rem 3.75rem 1rem;
+    }
+
+    .portfolio-header {
+        font-size: 1.8rem;
+    }
+
+    .portfolio-photos {
+        gap: 3rem;
+    }
+
+    .portfolio-photos>img {
+        width: 30%;
+    }
+
+    .photos__link {
+        font-size: 1.3rem;
+    }
+
+    .summary-text {
+        font-size: 1.7rem;
+    }
+
+    .footer-contacts {
+        padding: 3.563rem 2.375rem 3.625rem 2.625rem;
+    }
+
+    .contacts {
+        gap: 1.5rem;
+    }
+
+    .contacts-description {
+        font-size: 1.1rem;
+        padding-right: 1.063rem;
+    }
+
+    .contacts-phone {
+        font-size: 2.2rem;
+    }
+
+    .contacts-mail {
+        font-size: 2.2rem;
+    }
+
+    .advantages-header {
+        font-size: 2rem;
+    }
+
+    .advantages-checklist {
+        font-size: 1.3rem;
+    }
+
+    .gallery {
+        width: 20%;
+    }
+}
