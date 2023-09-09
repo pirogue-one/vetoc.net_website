@@ -344,6 +344,9 @@
 
 .footer__darkening {
     background: #00180D99;
+}
+
+.footer__centering {
     display: flex;
     gap: 10rem;
     padding: 5.563rem 2.375rem 5.625rem 2.625rem;
@@ -595,6 +598,17 @@ fieldset.form {
     font-weight: 400;
 }
 
+@media (min-width: 1921px) {
+    .header,
+    main,
+    .footer__centering{
+        max-width: 80%;
+        margin: 0 auto;
+    }
+
+    
+}
+
 @media (max-width: 1024px) {
 
     .services__cards-box {
@@ -744,7 +758,7 @@ fieldset.form {
             font-size: 1rem;
         }
 
-        .footer__darkening {
+        .footer__centering {
             padding: 1rem 0.875rem;
             flex-direction: column;
             gap: 3.4rem;
