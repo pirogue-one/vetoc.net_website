@@ -10,6 +10,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
+    <script defer src="./form.js"></script>
 </head>
 
 <body>
@@ -39,17 +40,17 @@
     <main>
         <section class="section contacts-form">
             <div class="contacts-form-container">
-                <fieldset class="form">
+                <form class="form" action="">
                     <p class="form__title">Связаться с нами</p>
-                    <input class="form__input-name" type="text" name="text" placeholder="Имя">
-                    <input class="form__input-numb" type="number" name="number" placeholder="Телефон">
+                    <input class="form__input-name" type="text" name="name" placeholder="Имя" required>
+                    <input class="form__input-numb" type="tel" name="number" placeholder="Телефон" pattern="[0-9+()-]" required>
                     <textarea class="form__input-message" cols="37" name="message" placeholder="Сообщение"></textarea>
                     <div class="form__agreement">
-                        <input class="form__checkbox" type="checkbox" id="politics">
+                        <input class="form__checkbox" type="checkbox" id="politics" required>
                         <p class="checkbox-text">Я соглашаюсь на обработку моих персональных данных</p>
                     </div>
                     <button class="form__btn" type="submit">ОТПРАВИТЬ</button>
-                </fieldset>
+                </form>
                 <div class="contacts">
                     <p class="contacts__description">ДЛЯ РАСЧЕТА СТОИМОСТИ РАБОТ СВЯЖИТЕТЬ С НАМИ ПО WHATSAPP ИЛИ
                         ПРИШЛИТЕ ТЕХ. ЗАДАНИЕ НА ПОЧТУ
@@ -93,6 +94,8 @@
                         </div>
                     </div>
                 </div>
+                <div class="flaticon"> Icons made by <a href="https://www.flaticon.com/authors/good-ware" title="Good Ware"> Good Ware </a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com'</a></div>
+                <a class="flaticon" href="https://www.freepik.com/free-photo/close-up-fresh-grass_945658.htm#query=grass&position=3&from_view=search&track=sph">Image by bedneyimages</a>
             </div>
         </div>
     </footer>
