@@ -262,6 +262,40 @@
     color: #000000;
 }
 
+.popup-hidden {
+    display: none !important;
+}
+
+.popup-image {
+    position: fixed;
+    display: flex;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(227, 227, 227, 0.8);
+    justify-content: center;
+    align-items: center;
+}
+
+.popup-image-wrapper {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.popup-image-wrapper span {
+    position: absolute;
+    top: 0;
+    right: 15px;
+    font-size: 4.5rem;
+}
+
+
+
 /* end portfolio */
 
 /* background grass */
