@@ -13,6 +13,7 @@
 
 .header__menu>li {
     overflow: hidden;
+    margin: 0 1rem;
 }
 
 .burger-container {
@@ -25,7 +26,6 @@
     align-items: center;
 }
 
-
 #burger {
     display: none;
 }
@@ -34,7 +34,7 @@
 .button-burger::before,
 .button-burger::after {
     display: block;
-    background-color: #76c4d3;
+    background-color: #000000;
     position: absolute;
     height: 4px;
     width: 30px;
@@ -528,10 +528,6 @@ fieldset.form {
 
 @media (max-width: 1024px) {
 
-    .header__menu {
-        display: none;
-    }
-
     .services__cards-box {
         width: 100%;
         gap: 2rem;
@@ -542,25 +538,78 @@ fieldset.form {
         min-width: 33%;
         padding: 1.875rem 1rem;
     }
+
     /* CONTACTS PAGE */
     .contacts-form-container {
         flex-direction: column;
     }
-     /* CONTACTS PAGE ENDS */
+
+    /* CONTACTS PAGE ENDS */
 
     .footer__summary {
         flex-direction: column;
     }
 
     .footer__summary-text,
-    .footer__contacts-text{
+    .footer__contacts-text {
         font-size: 1rem;
     }
 
+
+    /* BURGER MENU */
+
+    .burger-container {
+        display: flex;
+    }
+
+    .header__menu {
+        position: absolute;
+        top: 0;
+        margin-top: 70px;
+        left: 0;
+        flex-direction: column;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #burger~.header__menu li {
+        height: 0;
+        margin: 0;
+        padding: 0;
+        border: 0;
+        transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+    }
+
+    #burger:checked~.header__menu li {
+        border: 1px solid #0f3362;
+        height: 2.5em;
+        padding: 0.5em;
+        transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+    }
+
+    .header__menu>li {
+        display: flex;
+        justify-content: center;
+        margin: 0;
+        padding: 0.5em 0;
+        width: 100%;
+        color: white;
+        background-color: #FFFFFF;
+    }
+
+    .header__menu>li:not(:last-child) {
+        border-bottom: 1px solid #444;
+    }
+
+    /* BURGER MENU ENDS */
+
     @media (max-width: 800px) {
+
         .header__container {
             padding: 0.875rem;
         }
+
         .header__logo img {
             width: 30px;
             height: 30px;
@@ -575,7 +624,7 @@ fieldset.form {
             height: 20px;
         }
 
-        .header__phone-link{
+        .header__phone-link {
             font-size: 1rem;
         }
 
@@ -583,7 +632,9 @@ fieldset.form {
             padding: 2.75rem
         }
 
-        .hero__title {font-size: 2rem;}
+        .hero__title {
+            font-size: 2rem;
+        }
 
         .hero__location,
         .section__title {
@@ -597,12 +648,14 @@ fieldset.form {
 
         .services__cards-box {
             flex-wrap: nowrap;
-            overflow-x:scroll;
+            overflow-x: scroll;
+            justify-content: unset;
         }
 
         .services__card {
             width: unset;
-            min-width: 5rem;
+            max-width: 38%;
+            min-width: 40%;
             flex-shrink: 0;
         }
 
@@ -659,6 +712,7 @@ fieldset.form {
             font-size: 1rem;
             line-height: 1.5rem;
         }
+
         .advantages__tick img {
             width: 2rem;
         }
@@ -675,16 +729,72 @@ fieldset.form {
         .portfolio__item {
             width: 47%;
         }
-         /* PORTFOLIO PAGE ENDS */
 
-         /* CONTACTS PAGE */
-         .contacts__description {
+        /* PORTFOLIO PAGE ENDS */
+
+        /* CONTACTS PAGE */
+        .contacts__description {
             font-size: 1rem;
-         }
-          /* CONTACTS PAGE ENDS*/
+        }
+
+        /* CONTACTS PAGE ENDS*/
 
 
+        /* BURGER MENU */
+
+        .burger-container {
+            display: flex;
+        }
+
+        .header__menu {
+            position: absolute;
+            top: 0;
+            margin-top: 58px;
+            left: 0;
+            flex-direction: column;
+            width: 100%;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #burger~.header__menu li {
+            height: 0;
+            margin: 0;
+            padding: 0;
+            border: 0;
+            transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+        }
+
+        #burger:checked~.header__menu li {
+            border: 1px solid #0f3362;
+            height: 2.5em;
+            padding: 0.5em;
+            transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+        }
+
+        .header__menu>li {
+            display: flex;
+            justify-content: center;
+            margin: 0;
+            padding: 0.5em 0;
+            width: 100%;
+            color: white;
+            background-color: #FFFFFF;
+        }
+
+        .header__menu>li:not(:last-child) {
+            border-bottom: 1px solid #444;
+        }
+
+        /* BURGER MENU ENDS */
     }
-    
-   
+
+    @media (max-width: 599px) {
+        .services__card {
+            max-width: 47%; /* или сюда поставить ширину 79% и тогда будет до маленькой версии, но на 599 будут широкие, как в легаси */
+            min-width: 57%;
+        }
+    }
+
+
 }
