@@ -9,7 +9,7 @@ const arrowNext = document.querySelector('.arrow-next');
 
 let currentIndex = 0;
 
-galleryImages.forEach((item, index)=> {
+galleryImages.forEach((item, index) => {
     item.addEventListener('click', () => {
         let source = item.getAttribute('src');
         popupImage.src = source;
@@ -22,26 +22,20 @@ closeBtn.addEventListener('click', () => {
     popup.classList.toggle('popup-hidden');
 })
 
-
-
 arrowPrev.addEventListener('click', () => {
     if (currentIndex == 0) {
         currentIndex = galleryImages.length - 1;
-      } else {
+    } else {
         currentIndex--;
-      }
-
-      popupImage.src = galleryImages[currentIndex].getAttribute('src');
-    
+    }
+    popupImage.src = galleryImages[currentIndex].getAttribute('src');
 })
 
 arrowNext.addEventListener('click', () => {
     if (currentIndex == galleryImages.length - 1) {
         currentIndex = 0;
-      } else {
+    } else {
         currentIndex++;
-      }
-
-      popupImage.src = galleryImages[currentIndex].getAttribute('src');
-    
+    }
+    popupImage.src = galleryImages[currentIndex].getAttribute('src');
 })
