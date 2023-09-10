@@ -7,12 +7,89 @@
 
 a {
     text-decoration: none;
-    color:#000000;
+    color: #000000;
 }
 
 .sections-bg {
     background: linear-gradient(180deg, #CCDDFE 0%, #FFF 100%);
 }
+
+/* Effects */
+
+.a:hover {
+    cursor: pointer;
+}
+
+.menu__link::after {
+    display: block;
+    content: '';
+    border-bottom: solid 1px #092c5b;
+    transform: scaleX(0);
+    transition: transform 250ms ease-in-out;
+}
+
+.menu__link:hover:after {
+    transform: scaleX(1);
+}
+
+.menu__item:hover {
+    -webkit-transform: scale(1.02) translateY(-5px);
+    -ms-transform: scale(1.02) translateY(-5px);
+    transform: scale(1.02) translateY(-5px);
+}
+
+.header__phone:hover {
+    -webkit-transform: scale(1.02) translateY(-5px);
+    -ms-transform: scale(1.02) translateY(-5px);
+    transform: scale(1.02) translateY(-5px);
+}
+
+.portfolio__link:hover {
+    -webkit-transform: scale(1.02) translateY(-5px);
+    -ms-transform: scale(1.02) translateY(-5px);
+    transform: scale(1.02) translateY(-5px);
+}
+
+.portfolio__link:hover {
+    color: #1d3711
+}
+
+.form__btn:hover {
+    background: #e5eeff;
+    border: 1px solid #e5eeff;
+    cursor: pointer;
+}
+
+:focus::-webkit-input-placeholder {
+    color: transparent;
+    border: #CCDDFE;
+}
+
+:focus::-moz-placeholder {
+    color: transparent;
+}
+
+:focus:-moz-placeholder {
+    color: transparent;
+}
+
+:focus:-ms-input-placeholder {
+    color: transparent;
+}
+
+input:focus {
+   border: 1px solid #CDDEFF;
+   -webkit-transition: 0.5s;
+   transition: 0.5s;
+   outline: none;
+}
+
+textarea:focus {
+    border: 1px solid #CDDEFF;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    outline: none;
+ }
 
 /* BURGER */
 
@@ -107,6 +184,7 @@ a {
 
 .menu__item {
     text-align: center;
+    transition: all 0.5s ease;
 }
 
 .menu__link {
@@ -120,6 +198,7 @@ a {
     display: flex;
     gap: 0.625rem;
     align-items: center;
+    transition: all 0.5s ease;
 }
 
 .header__phone-link {
@@ -273,6 +352,7 @@ a {
     font-weight: 500;
     text-decoration: underline;
     color: #000000;
+    transition: all 0.5s ease;
 }
 
 .popup-hidden {
@@ -611,14 +691,15 @@ a {
 }
 
 @media (min-width: 1921px) {
+
     .header,
     main,
-    .footer__centering{
+    .footer__centering {
         max-width: 80%;
         margin: 0 auto;
     }
 
-    
+
 }
 
 @media (max-width: 1024px) {
