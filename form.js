@@ -13,7 +13,7 @@ form.addEventListener('submit', async (e) => {
     const text = `Сообщение из формы\r\n\r\nИмя: ${nameInput.value}\r\nТелефон: ${phoneInput.value}\r\nСообщение: ${messageInput.value}`;
 
     const formData = new FormData();
-    formData.append('chat_id', 259046312);
+    formData.append('chat_id', 5834096777);
     formData.append('parse_mode', 'Markdown');
     formData.append('text', text);
 
