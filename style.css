@@ -1001,6 +1001,14 @@ textarea:focus {
         .footer__contacts-text {
             text-align: center;
         }
+
+        .contacts {
+            align-items: center;
+        }
+
+        .contacts__description {
+            text-align: center;
+        }
     }
 
     @media (max-width: 390px) {
@@ -1024,14 +1032,6 @@ textarea:focus {
         .contacts-form-container {
             padding: 1rem 0.875rem 1rem 0.875rem;
             gap: 2rem;
-        }
-
-        .contacts {
-            align-items: center;
-        }
-
-        .contacts__description {
-            text-align: center;
         }
 
     }
