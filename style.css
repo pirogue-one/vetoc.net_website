@@ -78,10 +78,10 @@ a {
 }
 
 input:focus {
-   border: 1px solid #CDDEFF;
-   -webkit-transition: 0.5s;
-   transition: 0.5s;
-   outline: none;
+    border: 1px solid #CDDEFF;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    outline: none;
 }
 
 textarea:focus {
@@ -89,7 +89,7 @@ textarea:focus {
     -webkit-transition: 0.5s;
     transition: 0.5s;
     outline: none;
- }
+}
 
 /* BURGER */
 
@@ -1004,6 +1004,10 @@ textarea:focus {
         .services__card {
             max-width: 80%;
         }
-    }
 
-}
+        .contacts-form-container {
+            padding: 2.5rem 2rem 2.5rem 2rem;
+            gap: 3rem;
+        }
+
+    }
