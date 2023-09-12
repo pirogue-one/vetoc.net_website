@@ -783,7 +783,7 @@ textarea:focus {
 
     @media (max-width: 800px) {
 
-        .header__container, {
+        .header__container {
             padding: 0.875rem;
         }
 
