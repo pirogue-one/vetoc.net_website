@@ -989,6 +989,14 @@ textarea:focus {
         .services__card {
             max-width: 60%;
         }
+
+        .footer__contacts {
+            align-items: center;
+        }
+
+        .footer__contacts-text {
+            text-align: center;
+        }
     }
 
     @media (max-width: 390px) {
