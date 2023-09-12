@@ -783,7 +783,7 @@ textarea:focus {
 
     @media (max-width: 800px) {
 
-        .header__container {
+        .header__container, {
             padding: 0.875rem;
         }
 
@@ -860,6 +860,10 @@ textarea:focus {
 
         .footer__summary {
             gap: 1.625rem;
+        }
+
+        .contacts-form-container {
+            padding: 1.5rem 1.5rem 1.5rem 1.5rem;
         }
 
         .footer__contacts {
@@ -1013,9 +1017,21 @@ textarea:focus {
             max-width: 80%;
         }
 
+        .form {
+            padding: 1.3rem;
+        }
+
         .contacts-form-container {
-            padding: 2.5rem 2rem 2.5rem 2rem;
-            gap: 3rem;
+            padding: 1rem 0.875rem 1rem 0.875rem;
+            gap: 2rem;
+        }
+
+        .contacts {
+            align-items: center;
+        }
+
+        .contacts__description {
+            text-align: center;
         }
 
     }
