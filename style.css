@@ -28,26 +28,21 @@ a {
     transition: transform 250ms ease-in-out;
 }
 
-.menu__link:hover:after {
+.hasHover .menu__link:hover:after {
     transform: scaleX(1);
 }
 
-.menu__item:hover {
-    -webkit-transform: scale(1.02) translateY(-5px);
-    -ms-transform: scale(1.02) translateY(-5px);
-    transform: scale(1.02) translateY(-5px);
+.hasHover .header__phone:hover {
+    -webkit-transform: translateY(-3px);
+    -ms-transform: translateY(-3px);
+    transform: translateY(-3px);
 }
 
-.header__phone:hover {
-    -webkit-transform: scale(1.02) translateY(-5px);
-    -ms-transform: scale(1.02) translateY(-5px);
-    transform: scale(1.02) translateY(-5px);
-}
 
 .portfolio__link:hover {
-    -webkit-transform: scale(1.02) translateY(-5px);
-    -ms-transform: scale(1.02) translateY(-5px);
-    transform: scale(1.02) translateY(-5px);
+    -webkit-transform: translateY(-3px);
+    -ms-transform: translateY(-3px);
+    transform: translateY(-3px);
 }
 
 .portfolio__link:hover {
@@ -341,10 +336,10 @@ textarea:focus {
     transition: all 0.5s ease;
 }
 
-.portfolio__item:hover,
-.portfolio__item-v:hover {
+.hasHover .portfolio__item:hover,
+.hasHover .portfolio__item-v:hover {
     cursor: pointer;
-    transform: scale(1.02) translateY(-5px);
+    transform: scale(1.02) translateY(-3px);
 }
 
 .portfolio__link {
@@ -783,257 +778,257 @@ textarea:focus {
 
 }
 
-    @media (max-width: 800px) {
+@media (max-width: 800px) {
 
-        .header__container {
-            padding: 0.875rem;
-        }
-
-        .header__logo img {
-            width: 30px;
-            height: 30px;
-        }
-
-        .header__logo-name {
-            font-size: 1.25rem;
-        }
-
-        .header__phone img {
-            width: 20px;
-            height: 20px;
-        }
-
-        .header__phone-link {
-            font-size: 1rem;
-        }
-
-        .hero__text-box {
-            padding: 2.75rem
-        }
-
-        .hero__title {
-            font-size: 2rem;
-        }
-
-        .hero__location,
-        .section__title {
-            font-size: 1.25rem;
-        }
-
-        .hero__motto,
-        .services__card-title {
-            font-size: 0.875rem;
-        }
-
-        .section__title {
-            padding: 1.3rem 0;
-        }
-
-        .services__cards-box {
-            flex-wrap: nowrap;
-            overflow-x: scroll;
-            justify-content: unset;
-        }
-
-        .services__card {
-            width: unset;
-            max-width: 40%;
-            flex-shrink: 0;
-        }
-
-        .services__card-img {
-            width: 40px;
-            height: 40px;
-        }
-
-        .services__card-description {
-            font-size: 0.75rem;
-        }
-
-        .portfolio__link {
-            font-size: 1rem;
-        }
-
-        .footer__centering {
-            padding: 1rem 0.875rem;
-            flex-direction: column;
-            gap: 3.4rem;
-        }
-
-        .footer__summary {
-            gap: 1.625rem;
-        }
-
-        .contacts-form-container {
-            padding: 1.5rem 1.5rem 1.5rem 1.5rem;
-        }
-
-        .footer__contacts {
-            gap: 0.625rem;
-        }
-
-        .footer__contacts-phone,
-        .footer__contacts-mail,
-        .contacts__phone-number,
-        .contacts__email {
-            font-size: 1.625rem;
-        }
-
-        .footer__contacts-socials a img,
-        .contacts__socials a img {
-            width: 40px;
-            height: 40px;
-        }
-
-        .footer__contacts-links {
-            display: flex;
-            flex-direction: column;
-            width: fit-content;
-            gap: 0.625rem;
-        }
-
-        .footer__contacts-socials {
-            justify-content: space-between;
-            gap: 0;
-        }
-
-        /* PORTFOLIO PAGE */
-        .advantages__tick {
-            align-items: center;
-        }
-
-        .advantages__tick p {
-            font-size: 1rem;
-            line-height: 1.5rem;
-        }
-
-        .advantages__tick img {
-            width: 2rem;
-        }
-
-        .advantages__container,
-        .portfolio {
-            padding: 0 0.875rem;
-        }
-
-        .portfolio__gallery,
-        .portfolio__gallery-video {
-            gap: 1.8rem 0
-        }
-
-        .portfolio__item,
-        .portfolio__item-v {
-            width: 47%;
-        }
-
-        .arrow,
-        #close {
-            font-size: 2.5rem;
-        }
-
-
-        /* PORTFOLIO PAGE ENDS */
-
-        /* CONTACTS PAGE */
-        .contacts__description {
-            font-size: 1rem;
-        }
-
-        /* CONTACTS PAGE ENDS*/
-
-
-        /* BURGER MENU */
-
-        .burger-container {
-            display: flex;
-        }
-
-        .header__menu {
-            position: absolute;
-            top: 0;
-            margin-top: 58px;
-            left: 0;
-            flex-direction: column;
-            width: 100%;
-            justify-content: center;
-            align-items: center;
-        }
-
-        #burger~.header__menu li {
-            height: 0;
-            margin: 0;
-            padding: 0;
-            border: 0;
-            transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
-        }
-
-        #burger:checked~.header__menu li {
-            border: 1px solid #0f3362;
-            height: 2.5em;
-            padding: 0.5em;
-            transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
-        }
-
-        .header__menu>li {
-            display: flex;
-            justify-content: center;
-            margin: 0;
-            padding: 0.5em 0;
-            width: 100%;
-            color: white;
-            background-color: #FFFFFF;
-        }
-
-        .header__menu>li:not(:last-child) {
-            border-bottom: 1px solid #444;
-        }
-
-        /* BURGER MENU ENDS */
+    .header__container {
+        padding: 0.875rem;
     }
 
-    @media (max-width: 599px) {
-        .services__card {
-            max-width: 60%;
-        }
-
-        .footer__contacts {
-            align-items: center;
-        }
-
-        .footer__contacts-text {
-            text-align: center;
-        }
-
-        .contacts {
-            align-items: center;
-        }
-
-        .contacts__description {
-            text-align: center;
-        }
+    .header__logo img {
+        width: 30px;
+        height: 30px;
     }
 
-    @media (max-width: 390px) {
-        .header__container {
-            flex-direction: column;
-            gap: 1.2rem;
-        }
-
-        .header__menu {
-            margin-top: 85px;
-        }
-
-        .services__card {
-            max-width: 80%;
-        }
-
-        .form {
-            padding: 1.3rem;
-        }
-
-        .contacts-form-container {
-            padding: 1rem 0.875rem 1rem 0.875rem;
-            gap: 2rem;
-        }
-
+    .header__logo-name {
+        font-size: 1.25rem;
     }
+
+    .header__phone img {
+        width: 20px;
+        height: 20px;
+    }
+
+    .header__phone-link {
+        font-size: 1rem;
+    }
+
+    .hero__text-box {
+        padding: 2.75rem
+    }
+
+    .hero__title {
+        font-size: 2rem;
+    }
+
+    .hero__location,
+    .section__title {
+        font-size: 1.25rem;
+    }
+
+    .hero__motto,
+    .services__card-title {
+        font-size: 0.875rem;
+    }
+
+    .section__title {
+        padding: 1.3rem 0;
+    }
+
+    .services__cards-box {
+        flex-wrap: nowrap;
+        overflow-x: scroll;
+        justify-content: unset;
+    }
+
+    .services__card {
+        width: unset;
+        max-width: 40%;
+        flex-shrink: 0;
+    }
+
+    .services__card-img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .services__card-description {
+        font-size: 0.75rem;
+    }
+
+    .portfolio__link {
+        font-size: 1rem;
+    }
+
+    .footer__centering {
+        padding: 1rem 0.875rem;
+        flex-direction: column;
+        gap: 3.4rem;
+    }
+
+    .footer__summary {
+        gap: 1.625rem;
+    }
+
+    .contacts-form-container {
+        padding: 1.5rem 1.5rem 1.5rem 1.5rem;
+    }
+
+    .footer__contacts {
+        gap: 0.625rem;
+    }
+
+    .footer__contacts-phone,
+    .footer__contacts-mail,
+    .contacts__phone-number,
+    .contacts__email {
+        font-size: 1.625rem;
+    }
+
+    .footer__contacts-socials a img,
+    .contacts__socials a img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .footer__contacts-links {
+        display: flex;
+        flex-direction: column;
+        width: fit-content;
+        gap: 0.625rem;
+    }
+
+    .footer__contacts-socials {
+        justify-content: space-between;
+        gap: 0;
+    }
+
+    /* PORTFOLIO PAGE */
+    .advantages__tick {
+        align-items: center;
+    }
+
+    .advantages__tick p {
+        font-size: 1rem;
+        line-height: 1.5rem;
+    }
+
+    .advantages__tick img {
+        width: 2rem;
+    }
+
+    .advantages__container,
+    .portfolio {
+        padding: 0 0.875rem;
+    }
+
+    .portfolio__gallery,
+    .portfolio__gallery-video {
+        gap: 1.8rem 0
+    }
+
+    .portfolio__item,
+    .portfolio__item-v {
+        width: 47%;
+    }
+
+    .arrow,
+    #close {
+        font-size: 2.5rem;
+    }
+
+
+    /* PORTFOLIO PAGE ENDS */
+
+    /* CONTACTS PAGE */
+    .contacts__description {
+        font-size: 1rem;
+    }
+
+    /* CONTACTS PAGE ENDS*/
+
+
+    /* BURGER MENU */
+
+    .burger-container {
+        display: flex;
+    }
+
+    .header__menu {
+        position: absolute;
+        top: 0;
+        margin-top: 58px;
+        left: 0;
+        flex-direction: column;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #burger~.header__menu li {
+        height: 0;
+        margin: 0;
+        padding: 0;
+        border: 0;
+        transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+    }
+
+    #burger:checked~.header__menu li {
+        border: 1px solid #0f3362;
+        height: 2.5em;
+        padding: 0.5em;
+        transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+    }
+
+    .header__menu>li {
+        display: flex;
+        justify-content: center;
+        margin: 0;
+        padding: 0.5em 0;
+        width: 100%;
+        color: white;
+        background-color: #FFFFFF;
+    }
+
+    .header__menu>li:not(:last-child) {
+        border-bottom: 1px solid #444;
+    }
+
+    /* BURGER MENU ENDS */
+}
+
+@media (max-width: 599px) {
+    .services__card {
+        max-width: 60%;
+    }
+
+    .footer__contacts {
+        align-items: center;
+    }
+
+    .footer__contacts-text {
+        text-align: center;
+    }
+
+    .contacts {
+        align-items: center;
+    }
+
+    .contacts__description {
+        text-align: center;
+    }
+}
+
+@media (max-width: 390px) {
+    .header__container {
+        flex-direction: column;
+        gap: 1.2rem;
+    }
+
+    .header__menu {
+        margin-top: 85px;
+    }
+
+    .services__card {
+        max-width: 80%;
+    }
+
+    .form {
+        padding: 1.3rem;
+    }
+
+    .contacts-form-container {
+        padding: 1rem 0.875rem 1rem 0.875rem;
+        gap: 2rem;
+    }
+
+}
